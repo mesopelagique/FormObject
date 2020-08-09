@@ -6,9 +6,11 @@ Class constructor
 	This:C1470.form:=$2
 	
 Function defaultFile
+	C_OBJECT:C1216($0)
 	$0:=This:C1470.form.objectMethodsFolder().file(This:C1470.id+".4dm")
 	
 Function file
+	C_OBJECT:C1216($0)
 	If ($0.method#Null:C1517)
 		$0:=This:C1470.form.file.parent.file($0.method)
 	Else 

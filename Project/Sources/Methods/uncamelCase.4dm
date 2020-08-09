@@ -2,7 +2,7 @@
 
 C_TEXT:C284($0; $1)
 $0:=""
-C_LONGINT:C283($i)
+C_LONGINT:C283($l; $i; $code)
 
 $l:=Length:C16($1)
 

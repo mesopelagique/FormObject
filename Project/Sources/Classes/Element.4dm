@@ -7,7 +7,8 @@ Class constructor
 	
 Function generateEventCode
 	C_TEXT:C284($0)
-	$0:="$eventCode:=Form event code\n"
+	$0:="C_LONGINT($eventCode)\n"
+	$0:=$0+"$eventCode:=Form event code\n"
 	If (This:C1470.events#Null:C1517)
 		$0:=$0+"Case of\n"
 		
@@ -19,6 +20,10 @@ Function generateEventCode
 					$event4DCode:="On Clicked"
 				: ($event4DCode="On Double Click")
 					$event4DCode:="On Double Clicked"
+				: ($event4DCode="On Menu Select")
+					$event4DCode:="On Menu Selected"
+				: ($event4DCode="On Plugin Area")
+					$event4DCode:="On Plug in Area"
 			End case 
 			
 			$0:=$0+" : ($eventCode="+$event4DCode+")\n\n"
