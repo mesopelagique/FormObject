@@ -1,6 +1,6 @@
 # FormParser
 
-Par form JSON 4DForm file, to create classes and why not generate some code
+Parse form JSON 4DForm file, to create classes and why not generate some code
 
 ## Usage
 
@@ -11,7 +11,7 @@ $formFile:=$formsFolder.folder("FormButton").file("form.4DForm")
 $form:=$parser.parse($formFile)
 ```
 
-## Example: generate event code
+### Example: generate event code
 
 Using this code, the form method code will be replaced by a `Case of` on all available events
 
@@ -35,3 +35,9 @@ Case of
 End case 
 
 ```
+
+### Example: generate code with class wrapper
+
+If you make an object or class wrapper for 4d methods and its graphic element such as https://github.com/vdelachaux/classes, you can generate default code for form or object methods. according to our need.
+
+🚧 ...
