@@ -28,6 +28,7 @@
 			"formParser",
 			"mapClass",
 			"objectClasses",
+			"parseAll",
 			"uncamelCase"
 		]
 	},

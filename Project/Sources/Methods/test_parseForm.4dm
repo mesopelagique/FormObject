@@ -37,3 +37,10 @@ ASSERT:C1129($form#Null:C1517)
 ASSERT:C1129($form.pages.length=2)
 
 ASSERT:C1129(OB Keys:C1719($form.pages[1].objects).length>0)
+
+
+// get all form
+C_COLLECTION:C1488($forms)
+$forms:=$parser.parseAll()
+ASSERT:C1129($forms.length=3)
+
