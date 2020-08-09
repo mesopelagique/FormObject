@@ -4,7 +4,7 @@ Parse form JSON 4DForm files, to create classes and why not generate some codes.
 
 ## Parsing a form
 
-### by assing the form name
+### by passing the form name
 
 ```4d
 $form:=$parser.parse("MyFormName)
