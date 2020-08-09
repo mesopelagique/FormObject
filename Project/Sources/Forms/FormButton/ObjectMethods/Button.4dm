@@ -1,0 +1,1 @@
+﻿$eventCode:=Form event codeCase of : ($eventCode=On Clicked) ElseEnd case

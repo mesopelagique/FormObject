@@ -1,0 +1,157 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"text": "text default",
+					"top": 319,
+					"left": 394,
+					"width": 205,
+					"height": 123
+				},
+				"Radio Button": {
+					"type": "radio",
+					"text": "Radio",
+					"top": 12,
+					"left": 71,
+					"width": 98,
+					"height": 12,
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "Checkbox",
+					"top": 140,
+					"left": 27,
+					"width": 31,
+					"height": 30,
+					"events": [
+						"onClick"
+					]
+				},
+				"Thermometer": {
+					"type": "progress",
+					"left": 115,
+					"top": 146,
+					"width": 80,
+					"height": 12,
+					"max": 100
+				},
+				"Splitter": {
+					"type": "splitter",
+					"left": 191,
+					"top": 55,
+					"width": 37,
+					"height": 43
+				},
+				"Combo Box": {
+					"type": "combo",
+					"left": 48,
+					"top": 96,
+					"width": 61,
+					"height": 24,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Combo Box1": {
+					"type": "combo",
+					"left": 50,
+					"top": 227,
+					"width": 108,
+					"height": 58,
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"text": "Button",
+					"top": 325,
+					"left": 58,
+					"width": 144,
+					"height": 95,
+					"events": [
+						"onClick"
+					]
+				},
+				"Button Grid": {
+					"type": "buttonGrid",
+					"left": 350,
+					"top": 62,
+					"width": 184,
+					"height": 140,
+					"rowCount": 2,
+					"columnCount": 2,
+					"events": [
+						"onClick"
+					]
+				},
+				"Thermometer1": {
+					"type": "progress",
+					"left": 374,
+					"top": 77,
+					"width": 59,
+					"height": 43,
+					"max": 100
+				},
+				"Radio Button1": {
+					"type": "radio",
+					"text": "Radio",
+					"top": 161,
+					"left": 157,
+					"width": 1,
+					"height": 1,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 23,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+﻿{
+	"Classes": {
+		"groups": [
+			"Objects"
+		],
+		"classes": [
+			"Element",
+			"Form",
+			"Page"
+		]
+	},
+	"Objects": {
+		"classes": [
+			"Button",
+			"ButtonGrid",
+			"CheckBox",
+			"ComboBox",
+			"Input",
+			"Object",
+			"RadioButton",
+			"Splitter",
+			"Text",
+			"Thermometer"
+		]
+	},
+	"Project Methods": {
+		"methods": [
+			"formParser",
+			"mapClass",
+			"objectClasses",
+			"uncamelCase"
+		]
+	},
+	"Test": {
+		"methods": [
+			"test_parseForm",
+			"test_uncamel"
+		],
+		"forms": [
+			"FormButton",
+			"FormInput",
+			"FormTest"
+		]
+	},
+	"trash": {}
+}
