@@ -1,16 +1,17 @@
 # FormParser
 
-Parse form JSON 4DForm files, to create classes and why not generate some codes.
+Parse form JSON 4DForm files, to create classes, provide functions and why not generate some codes.
 
 ## Parsing a form
 
 ### by passing the form name
 
 ```4d
-$form:=$parser.parse("MyFormName)
+$form:=$parser.parse("MyFormName) // return your form object
 ```
 
 ### by passing the `4DForm` file
+
 ```4d
 $formsFolder:=Folder(fk database folder).folder("Project/Sources/Forms")
 $formFile:=$formsFolder.folder("FormButton").file("form.4DForm")
@@ -25,6 +26,21 @@ $forms:=$parser.parseAll()
 ```
 
 ## Examples of usage
+
+### get an object by its name
+
+```4d
+$myButton0:=$form.pages[1].objects["Button0"]
+```
+
+#### and manipulate it with functions
+
+There is a log of getter and setters for [`Object`](Project/Sources/Classes/Object.4dm)
+```4d
+$myButton0.setVisible(False)
+$myButton0.setEnabled(False)
+// or $myButton0.apply(New object("visible"; False; "enabled"; False))
+```
 
 ### generate event code
 
