@@ -4,18 +4,26 @@ Class constructor
 	C_VARIANT:C1683($1)
 	
 	C_OBJECT:C1216($file)
-	Case of 
-		: (Value type:C1509($1)=Is text:K8:3)  // suppose form name
-			$file:=Folder:C1567(fk database folder:K87:14; *).folder("Project/Sources/Forms").folder($1).file("form.4DForm")
-		: (Value type:C1509($1)#Is object:K8:27)
-			// error init
-		: (OB Instance of:C1731($1; 4D:C1709.File))
-			$file:=$1
-		: (OB Instance of:C1731($1; 4D:C1709.Folder))
-			$file:=$1.file("form.4DForm")
+	If (Count parameters:C259>0)
+		Case of 
+			: (Value type:C1509($1)=Is text:K8:3)  // suppose form name
+				$file:=Folder:C1567(fk database folder:K87:14; *).folder("Project/Sources/Forms").folder($1).file("form.4DForm")
+			: (Value type:C1509($1)#Is object:K8:27)
+				// error init
+			: (OB Instance of:C1731($1; 4D:C1709.File))
+				$file:=$1
+			: (OB Instance of:C1731($1; 4D:C1709.Folder))
+				$file:=$1.file("form.4DForm")
+			Else 
+				// error init
+		End case 
+	Else 
+		If (Length:C16(Current form name:C1298)>0)
+			$file:=Folder:C1567(fk database folder:K87:14; *).folder("Project/Sources/Forms").folder(Current form name:C1298).file("form.4DForm")
 		Else 
 			// error init
-	End case 
+		End if 
+	End if 
 	
 	If ($file#Null:C1517)
 		If ($file.exists)
