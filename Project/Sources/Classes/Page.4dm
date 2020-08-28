@@ -12,7 +12,7 @@ Class constructor
 			$object:=This:C1470["objects"][$key]
 			If (mapObjects[$object.type]#Null:C1517)
 				This:C1470["objects"][$key]:=mapObjects[$object.type].new($object; $2)  // + pass page? or page instead of form
-				This:C1470["objects"][$key].id:=$key
+				This:C1470["objects"][$key].name:=$key
 			End if 
 		End for each 
 	End if 

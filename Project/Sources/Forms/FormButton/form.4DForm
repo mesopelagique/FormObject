@@ -49,7 +49,7 @@
 		},
 		{
 			"objects": {
-				"Button": {
+				"Button0": {
 					"type": "button",
 					"text": "Button",
 					"top": 59,
@@ -59,7 +59,7 @@
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/Button.4dm"
+					"method": "ObjectMethods/Button0.4dm"
 				},
 				"Button1": {
 					"type": "button",
@@ -77,7 +77,7 @@
 			}
 		}
 	],
-	"geometryStamp": 4,
+	"geometryStamp": 5,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
