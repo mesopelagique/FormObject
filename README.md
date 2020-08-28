@@ -2,12 +2,25 @@
 
 Parse form JSON 4DForm files, to create classes, provide functions and why not generate some codes.
 
-## Parsing a form
+## Getting the current form object as instance of `Form` object
+
+
+```4d
+formParser:=formParser() // do only one time to get the parser
+```
+
+Then in form context
+
+```4d
+$form:=formParser.current()
+```
+
+## Parsing a form ie. getting an instance of `Form`
 
 ### by passing the form name
 
 ```4d
-$form:=$parser.parse("MyFormName") // return your form object
+$form:=formParser.parse("MyFormName") // return your form object
 ```
 
 ### by passing the `4DForm` file
@@ -16,30 +29,31 @@ $form:=$parser.parse("MyFormName") // return your form object
 $formsFolder:=Folder(fk database folder).folder("Project/Sources/Forms")
 $formFile:=$formsFolder.folder("FormButton").file("form.4DForm")
 
-$form:=$parser.parse($formFile)
+$form:=formParser.parse($formFile)
 ```
 
 ## Parsing all forms
 
 ```4d
-$forms:=$parser.parseAll()
+$forms:=formParser.parseAll() // collection of Form
 ```
 
 ## Examples of usage
 
-### get an object by its name
+### getting an object by its name
 
 ```4d
-$myButton0:=$form.pages[1].objects["Button0"]
+$myButton:=$form.pages[1].objects["Button0"]
 ```
 
 #### and manipulate it with functions
 
 There is a log of getter and setters for [`Object`](Project/Sources/Classes/Object.4dm)
+
 ```4d
-$myButton0.setVisible(False)
-$myButton0.setEnabled(False)
-// or $myButton0.apply(New object("visible"; False; "enabled"; False))
+$myButton.setVisible(False)
+$myButton.setEnabled(False)
+// or $myButton.apply(New object("visible"; False; "enabled"; False))
 ```
 
 ### generate event code
