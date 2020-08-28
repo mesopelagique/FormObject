@@ -50,7 +50,7 @@ $forms:=formParser.parseAll() // collection of Form
 ### getting an object by its name
 
 ```4d
-$myButton:=$form.pages[1].objects["Button0"]
+$myButton:=$form.pages[1].objects["Button0"] // instance of formParser.cs.Button (extends formParser.cs.Object)
 ```
 
 #### and manipulate it with functions
