@@ -1,5 +1,12 @@
 # Form Object
 
+[![language][code-shield]][code-url]
+[![language-top][code-top]][code-url]
+![code-size][code-size]
+[![release][release-shield]][release-url]
+[![license][license-shield]][license-url]
+[![discord][discord-shield]][discord-url]
+
 Parse form JSON 4DForm files, to create classes, provide functions and why not generate some codes.
 
 ## Getting the current form object as instance of `Form` object
@@ -86,3 +93,20 @@ End case
 If you make an object or class wrapper for 4d methods and its graphic element such as https://github.com/vdelachaux/classes, you can generate default code for form or object methods. according to our need.
 
 🚧 ...
+
+## Other components
+
+[<img src="https://mesopelagique.github.io/quatred.png" alt="mesopelagique"/>](https://mesopelagique.github.io/)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[code-shield]: https://img.shields.io/static/v1?label=language&message=4d&color=blue
+[code-top]: https://img.shields.io/github/languages/top/mesopelagique/FormObject.svg
+[code-size]: https://img.shields.io/github/languages/code-size/mesopelagique/FormObject.svg
+[code-url]: https://developer.4d.com/
+[release-shield]: https://img.shields.io/github/v/release/mesopelagique/FormObject
+[release-url]: https://github.com/mesopelagique/FormObject/releases/latest
+[license-shield]: https://img.shields.io/github/license/mesopelagique/FormObject
+[license-url]: LICENSE.md
+[discord-shield]: https://img.shields.io/badge/chat-discord-7289DA?logo=discord&style=flat
+[discord-url]: https://discord.gg/dVTqZHr
