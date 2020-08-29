@@ -63,6 +63,20 @@ $myButton.setEnabled(False)
 // or $myButton.apply(New object("visible"; False; "enabled"; False))
 ```
 
+### get an object without parsing form
+
+> Why? to get all function available in [`Object`](Project/Sources/Classes/Object.4dm)
+
+```4d
+$myButton:=formParser.object("MyButtonName")
+```
+
+If you want to specify the type
+
+```4d
+$myButton:=formParser.object("MyButtonName", "button")
+```
+
 ### generate event code
 
 Using this code, the form method code will be replaced by a `Case of` on all available events
