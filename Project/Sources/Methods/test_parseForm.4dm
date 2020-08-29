@@ -17,6 +17,13 @@ ASSERT:C1129(OB Instance of:C1731($form.pages[1].objects["Button1"]; cs:C1710.Bu
 ASSERT:C1129(Not:C34($form.pages[1].objects["Button0"].isVisible()))  // tu, not form visible
 //$form.pages[1].objects["Button0"].apply(New object("visible";True))
 
+ASSERT:C1129($form.objects().length=2; "No 2 button")
+ASSERT:C1129($form.objectsOfType("button").length=2; "No 2 button")
+ASSERT:C1129($form.objectsOfType("thermometer").length=0; "must not found thermometer")
+
+ASSERT:C1129(OB Instance of:C1731($parser.object("Button0"); cs:C1710.Object))
+ASSERT:C1129(OB Instance of:C1731($parser.object("Button0"; "button"); cs:C1710.Button))
+
 /// test some code generation
 ASSERT:C1129(Length:C16($form.generateEventCode())>0)
 $form.setMethodCode($form.generateEventCode())

@@ -6,6 +6,7 @@
 		"classes": [
 			"Element",
 			"Form",
+			"FormParser",
 			"Page"
 		]
 	},
@@ -28,7 +29,6 @@
 			"formParser",
 			"mapClass",
 			"objectClasses",
-			"parseAll",
 			"uncamelCase"
 		]
 	},

@@ -2,7 +2,6 @@ Class extends Element
 
 Class constructor
 	C_VARIANT:C1683($1)
-	
 	C_OBJECT:C1216($file)
 	If (Count parameters:C259>0)
 		Case of 
@@ -18,11 +17,7 @@ Class constructor
 				// error init
 		End case 
 	Else 
-		If (Length:C16(Current form name:C1298)>0)
-			$file:=Folder:C1567(fk database folder:K87:14; *).folder("Project/Sources/Forms").folder(Current form name:C1298).file("form.4DForm")
-		Else 
-			// error init
-		End if 
+		// error init
 	End if 
 	
 	If ($file#Null:C1517)
@@ -54,3 +49,29 @@ Function getMethodCode
 Function objectMethodsFolder
 	C_OBJECT:C1216($0)
 	$0:=This:C1470.file.parent.folder("ObjectMethods")
+	
+Function objects
+	C_COLLECTION:C1488($0)
+	$0:=New collection:C1472()
+	C_TEXT:C284($name)
+	C_OBJECT:C1216($page)
+	For each ($page; This:C1470.pages)
+		For each ($name; $page.objects)
+			$0.push($page.objects[$name])
+		End for each 
+	End for each 
+	
+Function objectsOfType
+	C_TEXT:C284($1)
+	C_COLLECTION:C1488($0)
+	$0:=New collection:C1472()
+	C_TEXT:C284($name)
+	C_OBJECT:C1216($page)
+	For each ($page; This:C1470.pages)
+		For each ($name; $page.objects)
+			If (String:C10($page.objects[$name].type)=$1)
+				$0.push($page.objects[$name])
+			End if 
+		End for each 
+	End for each 
+	
