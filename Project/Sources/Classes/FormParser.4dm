@@ -43,3 +43,31 @@ Function object
 	Else 
 		$0:=cs:C1710.Object.new(New object:C1471(); $1)
 	End if 
+	
+Function button
+	$0:=This:C1470.object($1; "button")
+	
+Function input
+	$0:=This:C1470.object($1; "input")
+	
+Function text
+	$0:=This:C1470.object($1; "text")
+	
+Function progress
+	$0:=This:C1470.object($1; "progress")
+	
+Function checkbox
+	$0:=This:C1470.object($1; "checkbox")
+	
+Function splitter
+	$0:=This:C1470.object($1; "splitter")
+	
+Function combo
+	$0:=This:C1470.object($1; "combo")
+	
+Function buttonGrid
+	$0:=This:C1470.object($1; "buttonGrid")
+	
+Function radio
+	$0:=This:C1470.object($1; "radio")
+	
