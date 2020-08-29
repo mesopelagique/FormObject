@@ -11,7 +11,6 @@ Parse form JSON 4DForm files, to create classes, provide functions and why not g
 
 ## Getting the current form object as instance of `Form` object
 
-
 ```4d
 formParser:=formParser() // do only one time to get the parser
 ```
@@ -47,7 +46,7 @@ $forms:=formParser.parseAll() // collection of Form
 
 ## Examples of usage
 
-### getting an object by its name
+### getting an object by its name in specific page
 
 ```4d
 $myButton:=$form.pages[1].objects["Button0"] // instance of formParser.cs.Button (extends formParser.cs.Object)
@@ -74,7 +73,7 @@ $myButton:=formParser.object("MyButtonName")
 If you want to specify the type
 
 ```4d
-$myButton:=formParser.object("MyButtonName", "button")
+$myButton:=formParser.object("MyButtonName", "button") // or formParser.button("MyButtonName")
 ```
 
 ### generate event code
