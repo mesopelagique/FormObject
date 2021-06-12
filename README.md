@@ -11,6 +11,8 @@ Parse form JSON 4DForm files, to create classes, provide functions and why not g
 
 `FormEvent` type ahead macro generate `Case of` for form event code.
 
+![FormEventMacro](FormEventMacro.gif)
+
 ## Getting the current form object as instance of `Form` object
 
 ```4d
