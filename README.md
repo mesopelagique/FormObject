@@ -113,6 +113,8 @@ If you make an object or class wrapper for 4d methods and its graphic element su
 
 🚧 ...
 
+if you have some classes by objec type, you can try `FormObjectToPasteBoard` type ahead macro when you in form main method
+
 ## Other components
 
 [<img src="https://mesopelagique.github.io/quatred.png" alt="mesopelagique"/>](https://mesopelagique.github.io/)
