@@ -9,11 +9,34 @@
 
 Parse form JSON 4DForm files, to create classes, provide functions and why not generate some codes.
 
+## Macros
+
+### Form Event Case of
+
 `FormEvent` type ahead macro generate `Case of` for form event code.
 
 ![FormEventMacro](FormEventMacro.gif)
 
-## Getting the current form object as instance of `Form` object
+The macro will search the activated events in the corresponding `4DForm` form file, before pasting the code.
+
+### Form objects classes instanciation
+
+The base contains type ahead macro `FormObjectToPasteBoard`(to use in form default method) or `Class Code To Pasteboard`(`FormCode` class) form macro to generate some code to instanciate some classes by form objects.
+
+For instance:
+
+```4d
+This["Button"]:=cs.button.new("Button")
+This["Text"]:=cs.text.new("Text")
+This["Combo Box"]:=cs.combo.new("Combo Box")
+This["Combo Box1"]:=cs.combo.new("Combo Box1")
+This["Button Grid"]:=cs.buttonGrid.new("Button Grid")
+This["Thermometer1"]:=cs.progress.new("Thermometer1")
+```
+
+## Use the code
+
+### Getting the current form object as instance of `Form` object
 
 ```4d
 formParser:=formParser() // do only one time to get the parser
@@ -25,15 +48,15 @@ Then in form context
 $form:=formParser.current()
 ```
 
-## Parsing a form ie. getting an instance of `Form`
+### Parsing a form ie. getting an instance of `Form`
 
-### by passing the form name
+#### by passing the form name
 
 ```4d
 $form:=formParser.parse("MyFormName") // return your form object
 ```
 
-### by passing the `4DForm` file
+#### by passing the `4DForm` file
 
 ```4d
 $formsFolder:=Folder(fk database folder).folder("Project/Sources/Forms")
@@ -42,7 +65,7 @@ $formFile:=$formsFolder.folder("FormButton").file("form.4DForm")
 $form:=formParser.parse($formFile)
 ```
 
-## Parsing all forms
+### Parsing all forms
 
 ```4d
 $forms:=formParser.parseAll() // collection of Form
@@ -56,7 +79,7 @@ $forms:=formParser.parseAll() // collection of Form
 $myButton:=$form.pages[1].objects["Button0"] // instance of formParser.cs.Button (extends formParser.cs.Object)
 ```
 
-#### and manipulate it with functions
+##### and manipulate it with functions
 
 There is a log of getter and setters for [`Object`](Project/Sources/Classes/Object.4dm)
 
@@ -66,7 +89,7 @@ $myButton.setEnabled(False)
 // or $myButton.apply(New object("visible"; False; "enabled"; False))
 ```
 
-### get an object without parsing form
+#### get an object without parsing form
 
 > Why? to get all function available in [`Object`](Project/Sources/Classes/Object.4dm)
 
@@ -80,9 +103,9 @@ If you want to specify the type
 $myButton:=formParser.object("MyButtonName", "button") // or formParser.button("MyButtonName")
 ```
 
-### generate event code
+#### generate event code
 
-Using this code, the form method code will be replaced by a `Case of` on all available events
+Using this code, the form method code will be replaced by a `Case of` on all available events. This code is used for the macro.
 
 ```4d
 $form.setMethodCode($form.generateEventCode())
@@ -102,18 +125,7 @@ Case of
   Else 
 
 End case 
-
 ```
-
-This base contains macro to do it
-
-### generate code with class wrapper
-
-If you make an object or class wrapper for 4d methods and its graphic element such as https://github.com/vdelachaux/classes, you can generate default code for form or object methods. according to our need.
-
-🚧 ...
-
-if you have some classes by objec type, you can try `FormObjectToPasteBoard` type ahead macro when you in form main method
 
 ## Other components
 
