@@ -23,7 +23,7 @@ If ($formFile#Null:C1517)
 			var $object : Object
 			$object:=$form.objectOfName($objectName)
 			If ($object=Null:C1517)
-				ALERT:C41("Cannot find "+$objectName)
+				ALERT:C41("Cannot find "+$objectName+", maybe close or save the form")
 			Else 
 				$code:=$object.generateEventCode()
 			End if 
