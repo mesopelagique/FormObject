@@ -4,13 +4,14 @@ Class constructor
 	For each ($key; $1)
 		This:C1470[$key]:=$1[$key]
 	End for each 
+	This:C1470.lineDelimiter:="\r\n"
 	
 Function generateEventCode
 	C_TEXT:C284($0)
-	$0:="C_LONGINT($eventCode)\n"
-	$0:=$0+"$eventCode:=Form event code\n"
+	$0:="var $eventCode: Integer"+This:C1470.lineDelimiter
+	$0:=$0+"$eventCode:=Form event code"+This:C1470.lineDelimiter
 	If (This:C1470.events#Null:C1517)
-		$0:=$0+"Case of\n"
+		$0:=$0+"Case of"+This:C1470.lineDelimiter
 		
 		C_TEXT:C284($event; $event4DCode)
 		For each ($event; This:C1470.events)
@@ -26,9 +27,9 @@ Function generateEventCode
 					$event4DCode:="On Plug in Area"
 			End case 
 			
-			$0:=$0+" : ($eventCode="+$event4DCode+")\n\n"
+			$0:=$0+" : ($eventCode="+$event4DCode+")"+This:C1470.lineDelimiter+This:C1470.lineDelimiter
 		End for each 
-		$0:=$0+" Else\n\n"
+		$0:=$0+" Else"+This:C1470.lineDelimiter+This:C1470.lineDelimiter
 		$0:=$0+"End case"
 	End if 
 	

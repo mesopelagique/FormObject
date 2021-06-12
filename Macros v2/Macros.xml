@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE macros SYSTEM "http://www.4d.com/dtd/2007/macros.dtd">
+<macros>
+  <macro in_menu="false" in_toolbar="false" name="FormEvent" type_ahead="true" version="2">
+    <text>
+      <method>Macro_FormEvent(&quot;<method_path />&quot;)</method>
+    </text></macro>
+</macros>

@@ -1,4 +1,4 @@
-﻿{
+{
 	"$4d": {
 		"version": "1",
 		"kind": "form"
@@ -72,7 +72,8 @@
 						"onClick",
 						"onGettingFocus",
 						"onPrintingDetail"
-					]
+					],
+					"method": "ObjectMethods/Button1.4dm"
 				}
 			}
 		}

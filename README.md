@@ -9,6 +9,8 @@
 
 Parse form JSON 4DForm files, to create classes, provide functions and why not generate some codes.
 
+`FormEvent` type ahead macro generate `Case of` for form event code.
+
 ## Getting the current form object as instance of `Form` object
 
 ```4d
@@ -89,17 +91,19 @@ example of result
 ```4d
 $eventCode:=Form event code
 Case of 
-	: ($eventCode=On Load)
-		
-	: ($eventCode=On Page Change)
-		
-	: ($eventCode=On Validate)
+  : ($eventCode=On Load)
 
-	Else 
-		
+  : ($eventCode=On Page Change)
+
+  : ($eventCode=On Validate)
+
+  Else 
+
 End case 
 
 ```
+
+This base contains macro to do it
 
 ### generate code with class wrapper
 

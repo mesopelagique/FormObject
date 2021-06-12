@@ -45,29 +45,47 @@ Function object
 	End if 
 	
 Function button
+	var $0 : Object
+	var $1 : Text
 	$0:=This:C1470.object($1; "button")
 	
 Function input
+	var $0 : Object
+	var $1 : Text
 	$0:=This:C1470.object($1; "input")
 	
 Function text
+	var $0 : Object
+	var $1 : Text
 	$0:=This:C1470.object($1; "text")
 	
 Function progress
+	var $0 : Object
+	var $1 : Text
 	$0:=This:C1470.object($1; "progress")
 	
 Function checkbox
+	var $0 : Object
+	var $1 : Text
 	$0:=This:C1470.object($1; "checkbox")
 	
 Function splitter
+	var $0 : Object
+	var $1 : Text
 	$0:=This:C1470.object($1; "splitter")
 	
 Function combo
+	var $0 : Object
+	var $1 : Text
 	$0:=This:C1470.object($1; "combo")
 	
 Function buttonGrid
+	var $0 : Object
+	var $1 : Text
 	$0:=This:C1470.object($1; "buttonGrid")
 	
 Function radio
+	var $0 : Object
+	var $1 : Text
 	$0:=This:C1470.object($1; "radio")
 	

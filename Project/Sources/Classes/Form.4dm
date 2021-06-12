@@ -75,3 +75,16 @@ Function objectsOfType
 		End for each 
 	End for each 
 	
+Function objectOfName
+	C_TEXT:C284($1)
+	C_OBJECT:C1216($0)
+	C_TEXT:C284($name)
+	C_OBJECT:C1216($page)
+	For each ($page; This:C1470.pages) Until ($0#Null:C1517)
+		For each ($name; $page.objects) Until ($0#Null:C1517)
+			If (String:C10($name)=$1)
+				$0:=$page.objects[$name]
+			End if 
+		End for each 
+	End for each 
+	

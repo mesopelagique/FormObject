@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true}
 
 
 ASSERT:C1129(uncamelCase("")="")

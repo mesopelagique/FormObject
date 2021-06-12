@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true}
 
 C_OBJECT:C1216($0)
 $0:=New object:C1471()
