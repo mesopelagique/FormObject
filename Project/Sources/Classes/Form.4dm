@@ -29,7 +29,11 @@ Class constructor
 			Super:C1705(New object:C1471())  // error init
 		End if 
 	Else 
-		Super:C1705(New object:C1471())  // error init
+		If (Value type:C1509($1)=Is object:K8:27)
+			Super:C1705($1)  // try with it
+		Else 
+			Super:C1705(New object:C1471())  // error init
+		End if 
 	End if 
 	
 Function setMethodCode
@@ -57,6 +61,9 @@ Function objects
 	C_OBJECT:C1216($page)
 	For each ($page; This:C1470.pages)
 		For each ($name; $page.objects)
+			If ($page.objects[$name].name=Null:C1517)
+				$page.objects[$name].name:=$name
+			End if 
 			$0.push($page.objects[$name])
 		End for each 
 	End for each 

@@ -1,4 +1,4 @@
-﻿{
+{
 	"Classes": {
 		"groups": [
 			"Objects"
@@ -8,6 +8,15 @@
 			"Form",
 			"FormParser",
 			"Page"
+		]
+	},
+	"Macros": {
+		"methods": [
+			"Macro_ClassVDL",
+			"Macro_FormEvent"
+		],
+		"classes": [
+			"FormCode"
 		]
 	},
 	"Objects": {
