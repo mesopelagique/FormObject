@@ -13,3 +13,8 @@ C_TEXT:C284(Macro_FormEvent; $1)
 //Get4DFormFile
 C_OBJECT:C1216(Get4DFormFile; $0)
 C_VARIANT:C1683(Get4DFormFile; $1)
+
+//Macro_ClassVDL
+C_TEXT:C284(Macro_ClassVDL; $1)
+C_TEXT:C284(Macro_ClassVDL; $2)
+C_TEXT:C284(Macro_ClassVDL; $3)

@@ -5,4 +5,8 @@
     <text>
       <method>Macro_FormEvent(&quot;<method_path />&quot;)</method>
     </text></macro>
+  <macro in_menu="false" in_toolbar="false" name="FormObjectToPasteBoard" type_ahead="true" version="2">
+    <text>
+      <method>Macro_ClassVDL(&quot;<method_path />&quot;;&quot;This&quot;;&quot;cs&quot;)</method>
+    </text></macro>
 </macros>
