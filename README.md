@@ -34,6 +34,16 @@ This["Button Grid"]:=cs.buttonGrid.new("Button Grid")
 This["Thermometer1"]:=cs.progress.new("Thermometer1")
 ```
 
+### Css Macros
+
+#### AppendFormToCss
+
+Get all or selected object and add object name and class if missing in css file
+
+#### AssignClassMacro
+
+Show a popup menu to select an existing class from css and apply to selected objects
+
 ## Use the code
 
 ### Getting the current form object as instance of `Form` object
