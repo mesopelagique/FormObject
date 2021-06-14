@@ -1,8 +1,22 @@
-﻿{
+{
 	"macros": {
 	  "Class Code To Pasteboard": {
-		"class": "FormCode",
-		"type": "left"
-	  }
+		"class": "FormCode"
+	  },
+      "Append Missing To Css": {
+          "class": "AppendFormToCss",
+          "type": ""
+      },
+      "Append Missing Classes To Css": {
+          "class": "AppendFormToCss",
+          "type": "class"
+      },
+      "Append Missing Names To Css": {
+          "class": "AppendFormToCss",
+          "type": "name"
+      },
+      "Apply existing CSS class": {
+          "class": "AssignClassMacro"
+      }
 	}
   }

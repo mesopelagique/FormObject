@@ -1,4 +1,4 @@
-﻿{
+{
 	"$4d": {
 		"version": "1",
 		"kind": "form"
@@ -41,10 +41,11 @@
 					"left": 35,
 					"top": 54,
 					"width": 197,
-					"height": 65
+					"height": 65,
+					"class": "toto"
 				}
 			}
 		}
 	],
-	"geometryStamp": 2
+	"geometryStamp": 4
 }

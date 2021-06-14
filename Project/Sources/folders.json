@@ -16,6 +16,8 @@
 			"Macro_FormEvent"
 		],
 		"classes": [
+			"AppendFormToCss",
+			"AssignClassMacro",
 			"FormCode"
 		]
 	},

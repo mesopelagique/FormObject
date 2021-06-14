@@ -19,21 +19,26 @@ Function onInvoke($editor : Object)->$result : Object
 	
 	If (This:C1470.hasSelectedOneObject($editor))
 		$object:=This:C1470.getSelectedObject($editor)
-		$code:=$code+$objectName+"[\""+$object.id+"\"]:="+$classStore+"."+$object.object.type+".new(\""+$object.id+"\")"+"\r\n"
+		$code:=$code+This:C1470.code($object; $objectName; $classStore)+"\n"
 	Else 
 		For each ($object; $form.objects())
-			$code:=$code+$objectName+"[\""+$object.name+"\"]:="+$classStore+"."+$object.type+".new(\""+$object.name+"\")"+"\r\n"
+			$code:=$code+This:C1470.code($object; $objectName; $classStore)+"\n"
 		End for each 
 	End if 
 	
 	SET TEXT TO PASTEBOARD:C523($code)
 	
+Function code($object : Object; $objectName : Text; $classStore : Text)->$code : Text
+	$code:=$objectName+"[\""+$object.name+"\"]:="+$classStore+"."+$object.type+".new(\""+$object.name+"\")"
+	
 	/// copyed from https://github.com/mesopelagique/Example-FormMacro-CopyPasteStyle/blob/master/Project/Sources/Classes/FormMacro.4dm :
 	
 Function getSelectedObject($editor : Object)->$selected : Object
 	ASSERT:C1129($editor.editor.currentSelection.length=1)
-	$selected:=New object:C1471("id"; $editor.editor.currentSelection[0])
-	$selected.object:=$editor.editor.currentPage.objects[$selected.id]
+	var $name : Text
+	$name:=$editor.editor.currentSelection[0]
+	$selected:=$editor.editor.currentPage.objects[$name]
+	$selected.name:=$name
 	
 	// Has selected one objet only
 Function hasSelectedOneObject($editor : Object)->$has : Boolean

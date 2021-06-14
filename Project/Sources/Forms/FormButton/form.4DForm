@@ -59,13 +59,14 @@
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/Button0.4dm"
+					"method": "ObjectMethods/Button0.4dm",
+					"class": "test"
 				},
 				"Button1": {
 					"type": "button",
 					"text": "Button",
-					"top": 148,
-					"left": 83,
+					"top": 161,
+					"left": 35,
 					"width": 205,
 					"height": 119,
 					"events": [
@@ -73,12 +74,13 @@
 						"onGettingFocus",
 						"onPrintingDetail"
 					],
-					"method": "ObjectMethods/Button1.4dm"
+					"method": "ObjectMethods/Button1.4dm",
+					"class": "test"
 				}
 			}
 		}
 	],
-	"geometryStamp": 5,
+	"geometryStamp": 10,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
