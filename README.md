@@ -38,11 +38,13 @@ This["Thermometer1"]:=cs.progress.new("Thermometer1")
 
 #### AppendFormToCss
 
-Get all or selected object and add object name and class if missing in css file
+Get all or selected object and add object name and class if missing in css main file
 
 #### AssignClassMacro
 
 Show a popup menu to select an existing class from css and apply to selected objects
+
+![MacroSelectClass](MacroSelectClass.gif)
 
 ## Use the code
 
